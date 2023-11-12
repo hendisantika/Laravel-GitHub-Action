@@ -55,7 +55,7 @@ class StudentController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('students.edit', compact('student'));
     }
 
     /**
