@@ -3,7 +3,7 @@ name: Testing Laravel with MySQL
 on:
   push:
     branches:    
-      - master 
+      - main
 jobs:
   laravel:
     name: Laravel (PHP ${{ matrix.php-versions }})
