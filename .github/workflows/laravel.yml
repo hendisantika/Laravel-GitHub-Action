@@ -19,14 +19,14 @@ jobs:
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: false
           MYSQL_ROOT_PASSWORD: naruto
-          MYSQL_DATABASE: naruto
+          MYSQL_DATABASE: student
         ports:
           - 3306/tcp
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
     strategy:
       fail-fast: false
       matrix:
-        php-versions: ['7.2', '7.3', '7.4', '8.2']
+        php-versions: ['8.2']
     steps:
       - name: Checkout
         uses: actions/checkout@v3
